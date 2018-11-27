@@ -7,7 +7,7 @@
 for /f "delims=" %%A in ('cd') do (
     set fn=%%~nxA
     )
-set moddir=%fn%_compiled
+set "moddir=%fn%_compiled"
 if exist "..\%moddir%" ( del ..\%moddir%\mod.ff ) else ( mkdir ..\%moddir% ) >nul
 if not exist mod2.csv ( goto zip ) >nul
 :modprompt
